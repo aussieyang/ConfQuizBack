@@ -5,8 +5,8 @@ class Api::QuestionsController < ApplicationController
     render json: @questions, status: 200
   end
 
-  def show
-    @questions = Question.find(params[:id])
+  def quiz
+    @questions = Question.find(params[:quiz_id])
     render json: @questions, status: 200
   end
 
