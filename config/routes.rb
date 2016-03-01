@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/login' => 'dashboard#login'
   get '/speaker/:id' => 'dashboard#speaker'
 
-  get '/new' => 'dashboard#create'
+  post '/new' => 'dashboard#create'
 
   get '/api/questions/:id' => 'api/questions#quiz'
 
