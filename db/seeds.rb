@@ -15,8 +15,8 @@ quizzes = Quiz.create([
   ])
 
 questions = Question.create([
-  {content: 'What is your favourite animal?', a: 'Monkeys', b: 'Turtles', c: 'Elephants', d: 'Lemurs', answer: 'Elephants', quiz_id: 0},
-  {content: 'How often do you wash your hands?', a: 'Every 20mins', b: 'Every Hour', c: 'Once a Day', d: 'Never', answer: 'Never', quiz_id: 0},
+  {content: 'What is your favourite animal?', a: 'Monkeys', b: 'Turtles', c: 'Elephants', d: 'Lemurs', answer: 'Elephants', quiz_id: 5},
+  {content: 'How often do you wash your hands?', a: 'Every 20mins', b: 'Every Hour', c: 'Once a Day', d: 'Never', answer: 'Never', quiz_id: 5},
   {content: 'Is it okay to hug a stranger?', a: 'Definitely', b: 'Sometimes', c: 'Never', d: 'If they are high', answer: 'Definitely', quiz_id: 1},
   {content: 'What is your favourite colour?', a: 'Linen', b: 'Tomato', c: 'Plum', d: 'Fuche', answer: 'Plum', quiz_id: 1},
   {content: 'If Jesus had a Twitter handle, what would it be?', a: 'Big J', b: 'JC2000', c: 'JC in the House', d: 'Son of God MF', answer: 'Big J', quiz_id: 2},
