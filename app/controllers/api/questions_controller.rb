@@ -6,7 +6,7 @@ class Api::QuestionsController < ApplicationController
   end
 
   def quiz
-    @questions = Question.find(params[:quiz_id])
+    @questions = Question.where('quiz_id = ?', params[:id]).all
     render json: @questions, status: 200
   end
 
