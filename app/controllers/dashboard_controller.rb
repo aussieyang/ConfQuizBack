@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
   end
 
   def speaker
-    @user = User.find(params[:name])
+    # @user = User.find(params[:name])
     
   end
 
@@ -14,10 +14,14 @@ class DashboardController < ApplicationController
 
   end
 
-  def session
-    @user = User.find(params[:name])
-    if @user.where(speaker? == true)
-      redirect_to '/speaker/#{ params[:id] }'
+  def create
+    @user = User.find_by(name: params[:name])
+    # @user_id = @user.id
+    if @user.speaker? == true
+      redirect_to '/speaker/#{ @user.id }'
+    else
+      # Need to enable sessions here
+      redirect_to '/'
     end
 
   end
