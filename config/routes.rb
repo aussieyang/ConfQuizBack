@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/login' => 'dashboard#login'
   get '/speaker/:id' => 'dashboard#speaker'
 
-  post 'new' => 'dashboard#session'
+  post '/new' => 'dashboard#create'
 
   get '/api/questions/:id' => 'api/questions#quiz'
 
@@ -19,7 +19,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :users
   end
-
 
   root 'pages#home'
 
