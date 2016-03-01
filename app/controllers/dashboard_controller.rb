@@ -24,22 +24,25 @@ class DashboardController < ApplicationController
 
   def create
     @user = User.find_by(name: params[:name])
-    # @user_id = @user.id
-    if @user && @user.authenticate(params[:password])
 
+    if @user == nil
+      new_user = User.new
+      new_user.name = params[:name]
+      new_user.password = params[:password]
+      new_user.speaker? == false
+      new_user.save
+
+      session[:user_id] = new_user.id
+      redirect_to '/'
     
-      if @user.speaker? == true
-        session[:user_id] = @user.id
-        redirect_to '/speaker/#{ @user.id }'
-      else
+    elsif @user.speaker? == true
+      session[:user_id] = @user.id
+      redirect_to "/speaker/#{ @user.id }"
+      
+    elsif @user.speaker? == false
         # Need to enable sessions here
         session[:user_id] = @user.id
         redirect_to '/'
-      end
-
-    else
-      redirect_to :back
-
     end
 
   end

@@ -28,6 +28,6 @@ questions = Question.create([
   ]);
 
 users = User.create([
-  {name: 'Greg Gremlin', speaker?: true},
-  {name: 'Tommy Troll', speaker?: false},
+  {name: 'Greg Gremlin', speaker?: true, password: 'cakepudding'},
+  {name: 'Tommy Troll', speaker?: false, password: 'cakepudding'},
   ])
