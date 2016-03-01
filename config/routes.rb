@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   get '/' => 'dashboard#index'
-  get '/dashboard' => 'dashboard#quiz'
+  get '/login' => 'dashboard#login'
+  get '/speaker/:id' => 'dashboard#speaker'
+
+  post 'new' => 'dashboard#session'
 
   namespace :api do
     resources :questions
