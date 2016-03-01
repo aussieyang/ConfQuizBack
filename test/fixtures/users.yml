@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  speaker?: false
+  q1?: false
+  q2?: false
+  q3?: false
+  q4?: false
+  q5?: false
+  q6?: false
+
+two:
+  name: MyString
+  speaker?: false
+  q1?: false
+  q2?: false
+  q3?: false
+  q4?: false
+  q5?: false
+  q6?: false

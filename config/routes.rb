@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :quizzes
   end
 
+  namespace :api do
+    resources :users
+  end
+
 
   root 'pages#home'
 

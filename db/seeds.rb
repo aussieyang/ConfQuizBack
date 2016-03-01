@@ -26,3 +26,8 @@ questions = Question.create([
   {content: 'If you had a son named Greg, what would you name your daughter?', a: 'Sam', b: 'Pat', c: 'Nic', d: 'Val', answer: 'Val', quiz_id: 4},
   {content: 'What shape should eggs be?', a: 'Cubes', b: 'Perfect Spheres', c: 'Pyramids', d: 'Star-shaped', answer: 'Cubes', quiz_id: 4},
   ]);
+
+users = User.create([
+  {name: 'Greg Gremlin', speaker?: true},
+  {name: 'Tommy Troll', speaker?: false},
+  ])
