@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get '/new' => 'dashboard#create'
 
+  get '/api/questions/:id' => 'api/questions#quiz'
+
   namespace :api do
     resources :questions
   end
