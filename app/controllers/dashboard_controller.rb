@@ -40,9 +40,8 @@ class DashboardController < ApplicationController
       redirect_to "/speaker/#{ @user.id }"
       
     elsif @user.speaker? == false
-        # Need to enable sessions here
-        session[:user_id] = @user.id
-        redirect_to '/'
+      session[:user_id] = @user.id
+      redirect_to '/'
     end
 
   end
