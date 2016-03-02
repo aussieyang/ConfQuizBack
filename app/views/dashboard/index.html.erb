@@ -23,7 +23,11 @@
     <header class="jumbotron hero-spacer">
       <h1>Welcome to the 2016 official WDIConf Nice And Friendly Quiz!</h1>
       <p>(Formerly known as the Torture Quiz)</p>
-      <p><a class="btn btn-primary btn-large">Start the quiz!</a>
+      <% if logged_in? %>  
+        <p><a href="" class="btn btn-primary btn-large">Start the quiz!</a>
+      <% else %>
+        <p><a href="/login" class="btn btn-primary btn-large">Start the quiz!</a>
+      <% end %>
       </p>
     </header>
     <hr>
@@ -40,11 +44,11 @@
                     <h3>Yang</h3>
                     <p>Binary Thinking and when to use it</p>
                     <p> 
-                        <%# if logged_in? %>     
+                        <% if logged_in? %>     
                             <a href="add quiz links here" class="btn btn-primary">Take the Quiz!</a> 
-                        <%# else %>
+                        <% else %>
                             <a href="/login" class="btn btn-primary">Take the Quiz!</a> 
-                        <%# end %>
+                        <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
@@ -57,7 +61,12 @@
                     <h3>Mahendra</h3>
                     <p>Google Maps API</p>
                     <p>
-                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
+                    <% if logged_in? %> 
+                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
+                    <% else %>
+                        <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                    <% end %> 
+                        <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
             </div>
@@ -69,7 +78,12 @@
                     <h3>Josh S.</h3>
                     <p>Lions and tigers and bears, oh my!</p>
                     <p>
-                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
+                    <% if logged_in? %>
+                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> 
+                    <% else %>
+                        <a href="/login" class="btn btn-primary">Take the Quiz!</a> 
+                    <% end %> 
+                        <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
             </div>
@@ -81,7 +95,12 @@
                     <h3>JB</h3>
                     <p>Puppies and kittens</p>
                     <p>
-                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
+                    <% if logged_in? %>
+                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> 
+                    <% else %>
+                        <a href="/login" class="btn btn-primary">Take the Quiz!</a> 
+                    <% end %> 
+                        <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
             </div>
@@ -95,7 +114,12 @@
                     <h3>Luke</h3>
                     <p>Five new technologies in 5 minutes</p>
                     <p>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
+                    <% if logged_in? %>
+                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> 
+                    <% else %>
+                        <a href="/login" class="btn btn-primary">Take the Quiz!</a> 
+                    <% end %> 
+                        <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
             </div>
@@ -107,12 +131,17 @@
                     <h3>Locky</h3>
                     <p>Lions and tigers and bears, oh my</p>
                     <p>
-                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
+                    <% if logged_in? %>
+                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
+                    <% else %>
+                        <a href="/login" class="btn btn-primary">Take the Quiz!</a> 
+                    <% end %> 
+                        <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6 hero-feature">
+<!--         <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
                 <img src="http://placehold.it/800x500" alt="">
                 <div class="caption">
@@ -131,11 +160,11 @@
                     <h3>DT</h3>
                     <p>We need to talk about cake</p>
                     <p>
-                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
+                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
             <hr>
     <footer>

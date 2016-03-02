@@ -3,10 +3,12 @@ class DashboardController < ApplicationController
   def logged_in?
     !!current_user
   end
+  helper_method :logged_in?
 
   def current_user
     User.find_by(id: session[:user_id])
   end
+  helper_method :current_user
 
   def index
     # go to the index page that lists the quizzes
@@ -19,7 +21,7 @@ class DashboardController < ApplicationController
   end
 
   def login
-
+    # takes to login form
   end
 
   def create
