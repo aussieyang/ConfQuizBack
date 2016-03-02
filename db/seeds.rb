@@ -12,6 +12,7 @@ quizzes = Quiz.create([
   {title: 'Why should we change underwear?', speaker: 'Danny Distressed'},
   {title: 'Do sharks have nightmares?', speaker: 'Amanda Huggenkis'},
   {title: 'Will you survive the military cadets?', speaker: 'Ben Dover'},
+  {title: 'How much wood could a woodchuck chuck?', speaker: 'Jerry Canne'},
   ])
 
 questions = Question.create([
@@ -28,6 +29,18 @@ questions = Question.create([
   ]);
 
 users = User.create([
-  {name: 'Greg Gremlin', speaker?: true, password: 'cakepudding'},
+  {name: 'Greg Gremlin', speaker?: false, password: 'cakepudding'},
   {name: 'Tommy Troll', speaker?: false, password: 'cakepudding'},
+  {name: 'Buttface McGee', speaker?: true, password: 'cakepudding'},
+  {name: 'Danny Distressed', speaker?: true, password: 'cakepudding'},
+  {name: 'Amanda Huggenkis', speaker?: true, password: 'cakepudding'},
+  {name: 'Ben Dover', speaker?: true, password: 'cakepudding'},
+  {name: 'Jerry Canne', speaker?: true, password: 'cakepudding'},
+  {name: 'Alan Ackman', speaker?: false, password: 'cakepudding'},
+  {name: 'Bridget Boone', speaker?: false, password: 'cakepudding'},
+  {name: 'Charlie Crooke', speaker?: false, password: 'cakepudding'},
+  {name: 'Dorothy Ding', speaker?: false, password: 'cakepudding'},
+  {name: 'Eliot Ellingsworth', speaker?: false, password: 'cakepudding'},
+  {name: 'Francis Freud', speaker?: false, password: 'cakepudding'},
+  {name: 'Harry Hills', speaker?: false, password: 'cakepudding'},
   ])
