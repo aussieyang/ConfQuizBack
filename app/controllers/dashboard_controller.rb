@@ -18,13 +18,13 @@ class DashboardController < ApplicationController
   def speaker
     # @user = User.find(params[:name])
     @user = User.find_by(id: session[:user_id])
-    @quiz = Quiz.
   end
 
   def login
     # takes to login form
   end
 
+  # Need to fix it so that speakers can take quizzes
   def create_session
     @user = User.find_by(name: params[:name])
 
@@ -38,6 +38,7 @@ class DashboardController < ApplicationController
       session[:user_id] = new_user.id
       redirect_to '/'
     
+    # This is the part to fix
     elsif @user.speaker? == true
       session[:user_id] = @user.id
       redirect_to "/speaker/#{ @user.id }"
@@ -50,8 +51,10 @@ class DashboardController < ApplicationController
   end
 
   def enable_quiz
-    speaker = User.find_by(id: session[:user_id])
-    
+    to_find = current_user
+    speaker = Quiz.find_by(name: to_find.name)
+    # speaker = select * from quizzes where speaker == to_find
+    # speaker.enabled == true
   end
 
 end
