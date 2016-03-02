@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
-  get '/' => 'dashboard#index'
-  get '/login' => 'dashboard#login'
-  get '/speaker/:id' => 'dashboard#speaker'
+  post '/enable_quiz' => 'session#enable_quiz'
 
-  post '/new' => 'dashboard#create_session'
-  post '/enable_quiz' => 'dashboard#enable_quiz'
+  get '/' => 'session#index'
+  get '/login' => 'session#login'
+  get '/speaker/:id' => 'session#speaker'
+  post '/new' => 'session#create'
+  get '/logout' => 'session#destroy'
 
   get '/api/questions/:id' => 'api/questions#quiz'
 

@@ -13,7 +13,7 @@ quizzes = Quiz.create([
   {title: 'Do sharks have nightmares?', speaker: 'Amanda Huggenkis'},
   {title: 'Will you survive the military cadets?', speaker: 'Ben Dover'},
   {title: 'How much wood could a woodchuck chuck?', speaker: 'Jerry Canne'},
-  ])
+  ]);
 
 questions = Question.create([
   {content: 'What is your favourite animal?', a: 'Monkeys', b: 'Turtles', c: 'Elephants', d: 'Lemurs', answer: 'Elephants', quiz_id: 5},
@@ -39,4 +39,4 @@ users = User.create([
   {name: 'Eliot Ellingsworth', speaker?: false, password: 'cakepudding'},
   {name: 'Francis Freud', speaker?: false, password: 'cakepudding'},
   {name: 'Harry Hills', speaker?: false, password: 'cakepudding'},
-  ])
+  ]);
