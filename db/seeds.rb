@@ -12,6 +12,7 @@ quizzes = Quiz.create([
   {title: 'Why should we change underwear?', speaker: 'Danny Distressed'},
   {title: 'Do sharks have nightmares?', speaker: 'Amanda Huggenkis'},
   {title: 'Will you survive the military cadets?', speaker: 'Ben Dover'},
+  {title: 'How much wood could a woodchuck chuck?', speaker: 'Jerry Canne'},
   ])
 
 questions = Question.create([
@@ -28,6 +29,18 @@ questions = Question.create([
   ]);
 
 users = User.create([
-  {name: 'Greg Gremlin', speaker?: true},
+  {name: 'Greg Gremlin', speaker?: false},
   {name: 'Tommy Troll', speaker?: false},
+  {name: 'Buttface McGee', speaker?: true},
+  {name: 'Danny Distressed', speaker?: true},
+  {name: 'Amanda Huggenkis', speaker?: true},
+  {name: 'Ben Dover', speaker?: true},
+  {name: 'Jerry Canne', speaker?: true},
+  {name: 'Alan Ackman', speaker?: false},
+  {name: 'Bridget Boone', speaker?: false},
+  {name: 'Charlie Crooke', speaker?: false},
+  {name: 'Dorothy Ding', speaker?: false},
+  {name: 'Eliot Ellingsworth', speaker?: false},
+  {name: 'Francis Freud', speaker?: false},
+  {name: 'Harry Hills', speaker?: false},
   ])
