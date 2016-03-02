@@ -17,14 +17,15 @@ class DashboardController < ApplicationController
 
   def speaker
     # @user = User.find(params[:name])
-    
+    @user = User.find_by(id: session[:user_id])
+    @quiz = Quiz.
   end
 
   def login
     # takes to login form
   end
 
-  def create
+  def create_session
     @user = User.find_by(name: params[:name])
 
     if @user == nil
@@ -46,6 +47,11 @@ class DashboardController < ApplicationController
       redirect_to '/'
     end
 
+  end
+
+  def enable_quiz
+    speaker = User.find_by(id: session[:user_id])
+    
   end
 
 end

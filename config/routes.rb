@@ -2,9 +2,10 @@ Rails.application.routes.draw do
 
   get '/' => 'dashboard#index'
   get '/login' => 'dashboard#login'
-  get '/speaker/:id' => 'dashboard#speaker'
+  get '/speaker' => 'dashboard#speaker'
 
-  post '/new' => 'dashboard#create'
+  post '/new' => 'dashboard#create_session'
+  post '/enable_quiz' => 'dashboard#enable_quiz'
 
   get '/api/questions/:id' => 'api/questions#quiz'
 

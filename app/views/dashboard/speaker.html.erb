@@ -1,3 +1,9 @@
-<h1>Add Speakers name in embedded ruby here</h1>
+<h1><%= @user.name %></h1>
 
-<button>Change the quiz shit</button>
+<!-- Form here for quiz -->
+<!-- Link by querying the Quiz table for User name -->
+
+<form action="/enable_quiz" method="post">
+  <input type="hidden">
+  <button>Change the quiz shit</button>
+</form>
