@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post '/enable_quiz' => 'session#enable_quiz'
+
   get '/' => 'session#index'
   get '/login' => 'session#login'
   get '/speaker/:id' => 'session#speaker'

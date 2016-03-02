@@ -1,17 +1,5 @@
 class SessionController < ApplicationController
 
-  def logged_in?
-    !!current_user
-  end
-  helper_method :logged_in?
-
-
-  def current_user
-    User.find_by(id: session[:user_id])
-  end
-  helper_method :current_user
-
-
   def index
     # go to the index page that lists the quizzes
   end
@@ -19,6 +7,7 @@ class SessionController < ApplicationController
 
   def speaker
     # @user = User.find(params[:name])
+    @user = User.find_by(id: session[:user_id])
   end
 
 
@@ -26,7 +15,7 @@ class SessionController < ApplicationController
     # takes to login form
   end
 
-
+  # Need to fix it so that speakers can take quizzes
   def create
     @user = User.find_by(name: params[:name])
 
@@ -50,10 +39,19 @@ class SessionController < ApplicationController
     end
   end
 
-
   def destroy
     session[:user_id] = nil
     redirect_to '/'
+  end
+
+  def enable_quiz
+    users_name = current_user.name
+    speaker = Quiz.find_by(speaker: users_name)
+    speaker.enabled = true
+    speaker.save
+
+    redirect_to '/'    
+
   end
 
 end
