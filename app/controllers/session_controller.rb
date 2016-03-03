@@ -13,12 +13,11 @@ class SessionController < ApplicationController
 
   def speaker
     # need to compare the usernames of the session and the quiz id name of the params
-    raise
     if current_user.id == params[:id].to_i
 
     else
       redirect_to '/'
-      
+
     end
 
   end
@@ -30,7 +29,7 @@ class SessionController < ApplicationController
     speaker.enabled = true
     speaker.save
 
-    redirect_to '/'    
+    redirect_to '/'
 
   end
 
@@ -53,7 +52,7 @@ class SessionController < ApplicationController
       session[:user_id] = new_user.id
       redirect_to '/'
 
-    else 
+    else
       session[:user_id] = @user.id
       redirect_to '/'
 
