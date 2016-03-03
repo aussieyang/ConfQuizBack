@@ -96,7 +96,7 @@ var QuizItemTemplateView = Backbone.View.extend({
       this.$el.find('#start-quiz').css('display','inline-block')
     }
     else { //SET BACK TO DISPLAY NONE
-      this.$el.find('#start-quiz').css('display','inline-block')
+      this.$el.find('#start-quiz').css('display','none')
     }
 		return this;
   }
@@ -129,7 +129,6 @@ var QuestionPageView = Backbone.View.extend({
 					console.log('INCORRECT');
 				}
 				$(event.target).closest('.modal-dialog').css('display','none');
-
 		},
 
   render: function() {
