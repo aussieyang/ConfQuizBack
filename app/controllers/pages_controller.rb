@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     render :home, layout: 'spa'
   end
 
-  private
+  private #this make the authenticate method hidden
 
   def authenticate
     redirect_to '/login' unless logged_in?
