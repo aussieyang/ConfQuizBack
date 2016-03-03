@@ -38,11 +38,11 @@ questions = Question.create([
 
   # Mahendra 2
 
-  {content: 'If Jesus had a Twitter handle, what would it be?', a: 'Big J', b: 'JC2000', c: 'JC in the House', d: 'Son of God MF', answer: 'Big J', quiz_id: 2},
-  {content: 'Ants, bees, beetles or mosquitos?', a: 'Ants', b: 'Bees', c: 'Beetles', d: 'Mosquitos', answer: 'Bees', quiz_id: 2},
-  {content: 'If alcohol was never invented, what would you drink instead?', a: 'Water', b: 'Coke', c: 'Tomato Soup', d: 'Lemon Juice', answer: 'Water', quiz_id: 2},
-  {content: 'What Olympic event would you most likely partake in?', a: 'Fencing', b: 'Twirling', c: 'Trampolining', d: 'Power-walking', answer: 'Twirling', quiz_id: 2},
-  {content: 'If you had a son named Greg, what would you name your daughter?', a: 'Sam', b: 'Pat', c: 'Nic', d: 'Val', answer: 'Val', quiz_id: 2},
+  {content: 'What did you take out of this talk?', a: 'Mahendra is fantastic', b: 'Nothing', c: 'Toasties', d: 'DBs are the bomb', answer: 'Toasties', quiz_id: 2},
+  {content: 'What is a datawarehouse?', a: 'OLAP', b: 'OLTP', c: 'Database', d: 'None of the above', answer: 'OLAP', quiz_id: 2},
+  {content: 'What is a datamart?', a: 'EDW', b: 'ODW', c: 'Datawarehouse', d: 'NoneWater', answer: 'ODW', quiz_id: 2},
+  {content: 'What is a view?', a: 'Table', b: 'Stored proc', c: 'Trigger', d: 'None', answer: 'None', quiz_id: 2},
+  {content: 'What is a database index?', a: 'Table', b: 'Data storage', c: 'Both', d: 'None', answer: 'Both', quiz_id: 2},
 
   # luke 5
 
