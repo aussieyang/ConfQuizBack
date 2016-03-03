@@ -107,6 +107,7 @@ var QuestionPageView = Backbone.View.extend({
 				//check answer
 				if (selectedAnswer == this.model.get('answer'))
 					console.log('CORRECT');
+					
 				else
 					console.log('INCORRECT');
 				//if correct update user score
