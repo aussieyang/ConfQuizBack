@@ -2,15 +2,18 @@ class SessionController < ApplicationController
 
   # go to the index page that lists the quizzes
   def index
-    @quiz = Quiz.all
+    @quiz1 = Quiz.find(1)
+    @quiz2 = Quiz.find(2)
+    @quiz3 = Quiz.find(3)
+    @quiz4 = Quiz.find(4)
+    @quiz5 = Quiz.find(5)
+    @quiz6 = Quiz.find(6)
+
   end
-
-  # Dashboard where the speaker can activate the quiz
-    # redirect_to "/speaker/#{ @user.id }"
-
 
   def speaker
     # need to compare the usernames of the session and the quiz id name of the params
+    raise
     if current_user.id == params[:id].to_i
 
     else

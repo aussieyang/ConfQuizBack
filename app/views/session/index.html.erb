@@ -30,7 +30,6 @@
       <% end %>
       </p>
     </header>
-    <%= User.find_by(id: session[:user_id]) %>
     <hr>
     <div class="row">
         <div class="col-lg-12">
@@ -45,11 +44,12 @@
                     <h3>Yang</h3>
                     <p>Binary Thinking and when to use it</p>
                     <p>
-                        <% if logged_in? %>
-                        <%# if logged_in? & @quiz[].enabled == true %>
-                            <a href="https://github.com/morning-warmups/100doors/blob/master/100doors.md" class="btn btn-primary">Take the Quiz!</a>
-                        <% else %>
+                        <% if logged_in? == false %>
                             <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                        <% elsif logged_in? & @quiz1.enabled == true %>
+                            <a href="take it to the quiz" class="btn btn-primary">Take the Quiz!</a>
+                        <% else %>
+                            <a href="/" class="btn btn-primary">Take the Quiz!</a>
                         <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
@@ -63,12 +63,13 @@
                     <h3>Mahendra</h3>
                     <p>Google Maps API</p>
                     <p>
-                    <% if logged_in? %>
-                    <%# if logged_in? & @quiz[].enabled == true %>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
-                    <% else %>
-                        <a href="/login" class="btn btn-primary">Take the Quiz!</a>
-                    <% end %>
+                        <% if logged_in? == false %>
+                            <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                        <% elsif logged_in? & @quiz2.enabled == true %>
+                            <a href="take it to the quiz" class="btn btn-primary">Take the Quiz!</a>
+                        <% else %>
+                            <a href="/" class="btn btn-primary">Take the Quiz!</a>
+                        <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
@@ -81,12 +82,13 @@
                     <h3>Josh S.</h3>
                     <p>Lions and tigers and bears, oh my!</p>
                     <p>
-                    <% if logged_in? %>
-                    <%# if logged_in? & @quiz[].enabled == true %>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
-                    <% else %>
-                        <a href="/login" class="btn btn-primary">Take the Quiz!</a>
-                    <% end %>
+                        <% if logged_in? == false %>
+                            <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                        <% elsif logged_in? & @quiz3.enabled == true %>
+                            <a href="take it to the quiz" class="btn btn-primary">Take the Quiz!</a>
+                        <% else %>
+                            <a href="/" class="btn btn-primary">Take the Quiz!</a>
+                        <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
@@ -99,12 +101,13 @@
                     <h3>JB</h3>
                     <p>Puppies and kittens</p>
                     <p>
-                    <% if logged_in? %>
-                    <%# if logged_in? & @quiz[].enabled == true %>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
-                    <% else %>
-                        <a href="/login" class="btn btn-primary">Take the Quiz!</a>
-                    <% end %>
+                        <% if logged_in? == false %>
+                            <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                        <% elsif logged_in? & @quiz4.enabled == true %>
+                            <a href="take it to the quiz" class="btn btn-primary">Take the Quiz!</a>
+                        <% else %>
+                            <a href="/" class="btn btn-primary">Take the Quiz!</a>
+                        <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
@@ -116,15 +119,13 @@
             <div class="thumbnail">
                 <img src="http://placehold.it/800x500" alt="">
                 <div class="caption">
-                    <h3>Luke</h3>
-                    <p>Five new technologies in 5 minutes</p>
-                    <p>
-                    <% if logged_in? %>
-                    <%# if logged_in? & @quiz[].enabled == true %>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
-                    <% else %>
-                        <a href="/login" class="btn btn-primary">Take the Quiz!</a>
-                    <% end %>
+                        <% if logged_in? == false %>
+                            <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                        <% elsif logged_in? & @quiz5.enabled == true %>
+                            <a href="take it to the quiz" class="btn btn-primary">Take the Quiz!</a>
+                        <% else %>
+                            <a href="/" class="btn btn-primary">Take the Quiz!</a>
+                        <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
@@ -137,12 +138,13 @@
                     <h3>Locky</h3>
                     <p>Lions and tigers and bears, oh my</p>
                     <p>
-                    <% if logged_in? %>
-                    <%# if logged_in? & @quiz[].enabled == true %>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
-                    <% else %>
-                        <a href="/login" class="btn btn-primary">Take the Quiz!</a>
-                    <% end %>
+                        <% if logged_in? == false %>
+                            <a href="/login" class="btn btn-primary">Take the Quiz!</a>
+                        <% elsif logged_in? & @quiz6.enabled == true %>
+                            <a href="take it to the quiz" class="btn btn-primary">Take the Quiz!</a>
+                        <% else %>
+                            <a href="/" class="btn btn-primary">Take the Quiz!</a>
+                        <% end %>
                         <a href="#" class="btn btn-default">View Results</a>
                     </p>
                 </div>
