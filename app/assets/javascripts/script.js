@@ -55,19 +55,12 @@ var QuizTitlePageView = Backbone.View.extend({
   },
 
   saveScore: function(event){
-
-  	var allUsers = new Users();
-  	allUsers.fetch().done(function(allUsers){
-			console.log('%%%%%%%%%%%');
-
-			var currentUser = allUsers.find({id: 3});
-			currentUser.fetch().done(function(currentUser){
-				console.log('!!!!!!!!!!!!!!!');
-				console.log(currentUser);
-			});
-
-		});
-
+  	var currentUserId = $('.user-id').html()
+  	$.ajax({
+  		url: 'http://localhost:3000/api/users/' +currentUserId,
+  		data: { score: score},
+  		type: 'post'
+  	});
 	},
 
   render: function() {
@@ -148,10 +141,12 @@ var ChartTotalsView = Backbone.View.extend({
 
 //=== CLEAR SCREEN ===//collect all elements and remove
 var setupBody = function() {
-  $('body').children().each( function(child) {
+  $('#mainContainer').children().each( function(child) {
       $(this).remove();
 	});
 }
+
+score = 0;
 
 //=========== ROUTER DECLARATION ===========//
 
@@ -170,7 +165,7 @@ var Router = Backbone.Router.extend({
 	showIndex: function(){
 		setupBody();
 		var mainMenu = new MainMenuView();
-		$('body').append(mainMenu.render().el);
+		$('#mainContainer').append(mainMenu.render().el);
 
 		var quizzes = new Quizzes();
 		quizzes.fetch().done(function(quizzes){
@@ -188,7 +183,7 @@ var Router = Backbone.Router.extend({
 		quiz.fetch().done(function(){
 			console.log(quiz);
 			var quizTitlePageView = new QuizTitlePageView({model: quiz});
-			$('body').append(quizTitlePageView.render().el);
+			$('#mainContainer').append(quizTitlePageView.render().el);
 
 			var questionsAll = new Questions();
 			questionsAll.fetch().done(function(questions){
@@ -199,7 +194,7 @@ var Router = Backbone.Router.extend({
 					// console.log(question);
 					//make a question view template for each Q
 					var questionTemplate = new QuestionPageView({model: question});
-					$('body').append(questionTemplate.render().el);
+					$('#mainContainer').append(questionTemplate.render().el);
 
 					//hide other questions - do this later
 
@@ -223,7 +218,7 @@ var Router = Backbone.Router.extend({
 		setupBody();
 
 		var header = new MainMenuView();
-		$('body').append(header.render().el);
+		$('#mainContainer').append(header.render().el);
 		$('#headerText').html('Results');
 		$('#subheaderText').html('the totals so far');
 
