@@ -45,16 +45,16 @@ questions = Question.create([
   ]);
 
 users = User.create([
-  {name: 'Yang', speaker?: true, password: 'cakepudding'},
-  {name: 'Mahendra', speaker?: true, password: 'cakepudding'},
-  {name: 'Josh', speaker?: true, password: 'cakepudding'},
-  {name: 'JB', speaker?: true, password: 'cakepudding'},
-  {name: 'Luke', speaker?: true, password: 'cakepudding'},
-  {name: 'Locky', speaker?: true, password: 'cakepudding'},
-  {name: 'Bridget Boone', speaker?: false, password: 'cakepudding'},
-  {name: 'Charlie Crooke', speaker?: false, password: 'cakepudding'},
-  {name: 'Dorothy Ding', speaker?: false, password: 'cakepudding'},
-  {name: 'Eliot Ellingsworth', speaker?: false, password: 'cakepudding'},
-  {name: 'Francis Freud', speaker?: false, password: 'cakepudding'},
-  {name: 'Harry Hills', speaker?: false, password: 'cakepudding'},
+  {name: 'Yang', speaker?: true, password: 'cakepudding', score: 0},
+  {name: 'Mahendra', speaker?: true, password: 'cakepudding', score: 0},
+  {name: 'Josh', speaker?: true, password: 'cakepudding', score: 0},
+  {name: 'JB', speaker?: true, password: 'cakepudding', score: 0},
+  {name: 'Luke', speaker?: true, password: 'cakepudding', score: 0},
+  {name: 'Locky', speaker?: true, password: 'cakepudding', score: 0},
+  {name: 'Bridget Boone', speaker?: false, password: 'cakepudding', score: 0},
+  {name: 'Charlie Crooke', speaker?: false, password: 'cakepudding', score: 0},
+  {name: 'Dorothy Ding', speaker?: false, password: 'cakepudding', score: 0},
+  {name: 'Eliot Ellingsworth', speaker?: false, password: 'cakepudding', score: 0},
+  {name: 'Francis Freud', speaker?: false, password: 'cakepudding', score: 0},
+  {name: 'Harry Hills', speaker?: false, password: 'cakepudding', score: 0},
   ]);
