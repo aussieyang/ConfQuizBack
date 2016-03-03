@@ -6,8 +6,17 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @quizzes = User.find(params[:id])
+    @users = User.find(params[:id])
     render json: @users, status: 200
   end
+
+# need to pass current_user.id into find() and have params in view
+  def score
+    user = User.find(params[:id])
+    user.score = user.score + params[:score]
+    user.save
+  end
+
+
 
 end
