@@ -88,13 +88,19 @@ var QuizItemTemplateView = Backbone.View.extend({
   className: 'col-md-3 col-sm-6 hero-feature',
   template: $('#quizMenuItemTemplate').html(),
 
-  //if logged in display buttons etc....
 
   render: function() {
     var html = Mustache.render(this.template, this.model);
 		this.$el.html(html);
+    if (this.model.enabled) {
+      this.$el.find('#start-quiz').css('display','inline-block')
+    }
+    else {
+      this.$el.find('#start-quiz').css('display','none')
+    }
 		return this;
   }
+
 });
 
 
@@ -171,6 +177,7 @@ var Router = Backbone.Router.extend({
 			_.each(quizzes, function(quiz){
 				var quizItemTemplate = new QuizItemTemplateView({ model: quiz});
 				$('#listArea').append(quizItemTemplate.render().el);
+
 			});
 		});
 	},
