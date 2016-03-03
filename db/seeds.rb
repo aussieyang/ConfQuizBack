@@ -52,12 +52,12 @@ questions = Question.create([
   {content: 'Why did the Snowtown killers turn to cannibalism?', a: 'Because there is no God, there is only pain and senseless misery', b: 'Because they knew nothing but depravity', c: 'Because food shortages', d: 'Because human flesh it the tastiest flesh. Take me to Adelaide now', answer: 'Because they knew nothing but depravity', quiz_id: 5},
 
   # Locky 6
-
-  {content: 'If Jesus had a Twitter handle, what would it be?', a: 'Big J', b: 'JC2000', c: 'JC in the House', d: 'Son of God MF', answer: 'Big J', quiz_id: 6},
-  {content: 'Ants, bees, beetles or mosquitos?', a: 'Ants', b: 'Bees', c: 'Beetles', d: 'Mosquitos', answer: 'Bees', quiz_id: 6},
-  {content: 'If alcohol was never invented, what would you drink instead?', a: 'Water', b: 'Coke', c: 'Tomato Soup', d: 'Lemon Juice', answer: 'Water', quiz_id: 6},
-  {content: 'What Olympic event would you most likely partake in?', a: 'Fencing', b: 'Twirling', c: 'Trampolining', d: 'Power-walking', answer: 'Twirling', quiz_id: 6},
-  {content: 'If you had a son named Greg, what would you name your daughter?', a: 'Sam', b: 'Pat', c: 'Nic', d: 'Val', answer: 'Val', quiz_id: 6},
+  
+  {content: 'what is my favourite star wars movie?', a: 'phantom menace', b: 'empire strikes back', c: 'return of the jedi', d: 'new hope', answer: 'empire strikes back', quiz_id: 6},
+ {content: 'favourite genre of music?', a: 'techno', b: 'country', c: 'hip hop', d: 'metal', answer: 'techno', quiz_id: 6},
+ {content: 'What was the original creative coding project that lead to development of the frameworks?', a: 'photoshop', b: 'nintendo', c: 'iTunes Visualiser', d: 'pong', answer: 'Von Einen', quiz_id: 6},
+ {content: 'Which Olympic event would JB be best at?', a: 'Synchronised Swimming', b: 'Twirling', c: 'Curling', d: 'Power-walking', answer: 'Twirling', quiz_id: 6},
+ {content: 'what framework was built from this?', a: 'react', b: 'unity', c: 'C++', d: 'Cinder', answer: 'Cinder', quiz_id: 6},
 
   ]);
 
