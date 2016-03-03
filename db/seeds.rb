@@ -17,15 +17,18 @@ quizzes = Quiz.create([
 
 questions = Question.create([
   # Yang to make his questions with id 1
-  {content: 'What is your favourite animal?', a: 'Monkeys', b: 'Turtles', c: 'Elephants', d: 'Lemurs', answer: 'Elephants', quiz_id: 1},
-  {content: 'How often do you wash your hands?', a: 'Every 20mins', b: 'Every Hour', c: 'Once a Day', d: 'Never', answer: 'Never', quiz_id: 1},
-  {content: 'Is it okay to hug a stranger?', a: 'Definitely', b: 'Sometimes', c: 'Never', d: 'If they are high', answer: 'Definitely', quiz_id: 1},
-  {content: 'What is your favourite colour?', a: 'Linen', b: 'Tomato', c: 'Plum', d: 'Fuche', answer: 'Plum', quiz_id: 1},
+  {content: 'Is this question binary?', a: 'Yes', b: 'No', c: 'Maybe', d: 'This is not an option', answer: 'No', quiz_id: 1},
+  {content: "What colour is Boole's moustache?", a: 'Black', b: 'White', c: 'Grey', d: 'He has none', answer: 'He has none', quiz_id: 1},
+  {content: 'Fight or Flight?', a: 'Fight', b: 'Flight', c: 'Cry', d: 'Give up', answer: 'Cry', quiz_id: 1},
+  {content: 'How likely is it that you get 2 tails in a row?', a: '50%', b: '20%', c: '15%', d: '25%', answer: '25%', quiz_id: 1},
+  {content: 'Cake or Death?', a: 'Cake', b: 'Death', c: 'Arrrgh!!', d: 'False dilemma!', answer: 'Cake', quiz_id: 1},
+
   # Josh 3
   {content: 'Most important thing in your CV?', a: 'Content', b: 'Layout', c: 'Style', d: 'Skills Table', answer: 'Skills Table', quiz_id: 3},
   {content: 'Pick what you shouldnt tell recruiters', a: 'Where you are interviewing', b: 'How many places you are interviewing at', c: 'If you have applied at a company', d: 'If you have reservations about an organisation', answer: 'Where you are interviewing', quiz_id: 3},
   {content: 'Best footbal team in the world?', a: 'Barcelona', b: 'Real Madrid', c: 'Leeds United', d: 'Bayern Munich', answer: 'Leeds United', quiz_id: 3},
   {content: 'First thing to do if you want to apply for a job?', a: 'Email your CV directly', b: 'Apply through job board', c: 'Add hiring manager on LI', d: 'Call the HR department', answer: 'Call the HR department', quiz_id: 3},
+
   # jb 4
   {content: 'JB looks most like which animal?', a: 'Lemur', b: 'Goat', c: 'Aye-Aye', d: 'Sloth', answer: 'Aye-Aye', quiz_id: 4},
   {content: 'JBs penis size', a: 'Miniscule', b: 'Tiny', c: 'Pathetic', d: 'Embarresing', answer: 'Pathetic', quiz_id: 4},
