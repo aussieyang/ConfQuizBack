@@ -246,7 +246,7 @@ var Router = Backbone.Router.extend({
 				namesArray.push(user.name);
 				console.log(user.score);
 				//CHANGE THIS WHEN REAL SCORES ARE AVAILABLE
-				scoresArray.push(user.score + randomScalingFactor());
+				scoresArray.push(user.score);
 			});
 
 			console.log(namesArray);
