@@ -46,11 +46,10 @@ questions = Question.create([
 
   # luke 5
 
-  {content: 'If Jesus had a Twitter handle, what would it be?', a: 'Big J', b: 'JC2000', c: 'JC in the House', d: 'Son of God MF', answer: 'Big J', quiz_id: 5},
-  {content: 'Ants, bees, beetles or mosquitos?', a: 'Ants', b: 'Bees', c: 'Beetles', d: 'Mosquitos', answer: 'Bees', quiz_id: 5},
-  {content: 'If alcohol was never invented, what would you drink instead?', a: 'Water', b: 'Coke', c: 'Tomato Soup', d: 'Lemon Juice', answer: 'Water', quiz_id: 5},
-  {content: 'What Olympic event would you most likely partake in?', a: 'Fencing', b: 'Twirling', c: 'Trampolining', d: 'Power-walking', answer: 'Twirling', quiz_id: 5},
-  {content: 'If you had a son named Greg, what would you name your daughter?', a: 'Sam', b: 'Pat', c: 'Nic', d: 'Val', answer: 'Val', quiz_id: 5},
+  {content: 'Where did Australia’s first murder duo dump the bodies of five women?', a: 'Toorak', b: 'Truro', c: 'Too Truro', d: 'Prue and Truro', answer: 'Truro', quiz_id: 5},
+  {content: 'Who murdered Richard Kelvin?', a: 'Spencer Bevan Von Einem', b: 'Bevan Spencer Von Einem', c: 'Poison Ivy', d: 'Bon Iver', answer: 'Bevan Spencer Von Einem', quiz_id: 5},
+  {content: 'Why are there so many murders in Adelaide?', a: 'Because there are too many churches', b: 'Because boat people keep stealing all the jobs', c: 'Because boat people keep stealing all the women', d: 'Because systemic failure of welfare/justice/mental health systems or humanity, or because something else', answer: 'Because systemic failure of welfare/justice/mental health systems or humanity, or because something else', quiz_id: 5},
+  {content: 'Why did the Snowtown killers turn to cannibalism?', a: 'Because there is no God, there is only pain and senseless misery', b: 'Because they knew nothing but depravity', c: 'Because food shortages', d: 'Because human flesh it the tastiest flesh. Take me to Adelaide now', answer: 'Because they knew nothing but depravity', quiz_id: 5},
 
   # Locky 6
 
