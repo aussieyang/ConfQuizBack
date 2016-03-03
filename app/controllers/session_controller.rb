@@ -1,18 +1,39 @@
 class SessionController < ApplicationController
 
+  # go to the index page that lists the quizzes
   def index
-    # go to the index page that lists the quizzes
+    @quiz = Quiz.all
   end
+
+  # Dashboard where the speaker can activate the quiz
+    # redirect_to "/speaker/#{ @user.id }"
 
 
   def speaker
-    # @user = User.find(params[:name])
-    @user = User.find_by(id: session[:user_id])
+    # need to compare the usernames of the session and the quiz id name of the params
+    if current_user.id == params[:id].to_i
+
+    else
+      redirect_to '/'
+      
+    end
+
   end
 
+  # activating the quiz in quizzes
+  def enable_quiz
+    users_name = current_user.name
+    speaker = Quiz.find_by(speaker: users_name)
+    speaker.enabled = true
+    speaker.save
 
+    redirect_to '/'    
+
+  end
+
+  # takes to login form
   def login
-    # takes to login form
+
   end
 
   # Need to fix it so that speakers can take quizzes
@@ -29,29 +50,18 @@ class SessionController < ApplicationController
       session[:user_id] = new_user.id
       redirect_to '/'
 
-    elsif @user.speaker? == true
-      session[:user_id] = @user.id
-      redirect_to "/speaker/#{ @user.id }"
-
-    elsif @user.speaker? == false
+    else 
       session[:user_id] = @user.id
       redirect_to '/'
+
     end
+
   end
 
+  # logout for testing
   def destroy
     session[:user_id] = nil
     redirect_to '/'
-  end
-
-  def enable_quiz
-    users_name = current_user.name
-    speaker = Quiz.find_by(speaker: users_name)
-    speaker.enabled = true
-    speaker.save
-
-    redirect_to '/'    
-
   end
 
 end

@@ -30,6 +30,7 @@
       <% end %>
       </p>
     </header>
+    <%= User.find_by(id: session[:user_id]) %>
     <hr>
     <div class="row">
         <div class="col-lg-12">
@@ -45,7 +46,8 @@
                     <p>Binary Thinking and when to use it</p>
                     <p>
                         <% if logged_in? %>
-                            <a href="add quiz links here" class="btn btn-primary">Take the Quiz!</a>
+                        <%# if logged_in? & @quiz[].enabled == true %>
+                            <a href="https://github.com/morning-warmups/100doors/blob/master/100doors.md" class="btn btn-primary">Take the Quiz!</a>
                         <% else %>
                             <a href="/login" class="btn btn-primary">Take the Quiz!</a>
                         <% end %>
@@ -62,6 +64,7 @@
                     <p>Google Maps API</p>
                     <p>
                     <% if logged_in? %>
+                    <%# if logged_in? & @quiz[].enabled == true %>
                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
                     <% else %>
                         <a href="/login" class="btn btn-primary">Take the Quiz!</a>
@@ -79,6 +82,7 @@
                     <p>Lions and tigers and bears, oh my!</p>
                     <p>
                     <% if logged_in? %>
+                    <%# if logged_in? & @quiz[].enabled == true %>
                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
                     <% else %>
                         <a href="/login" class="btn btn-primary">Take the Quiz!</a>
@@ -96,6 +100,7 @@
                     <p>Puppies and kittens</p>
                     <p>
                     <% if logged_in? %>
+                    <%# if logged_in? & @quiz[].enabled == true %>
                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
                     <% else %>
                         <a href="/login" class="btn btn-primary">Take the Quiz!</a>
@@ -115,6 +120,7 @@
                     <p>Five new technologies in 5 minutes</p>
                     <p>
                     <% if logged_in? %>
+                    <%# if logged_in? & @quiz[].enabled == true %>
                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
                     <% else %>
                         <a href="/login" class="btn btn-primary">Take the Quiz!</a>
@@ -132,6 +138,7 @@
                     <p>Lions and tigers and bears, oh my</p>
                     <p>
                     <% if logged_in? %>
+                    <%# if logged_in? & @quiz[].enabled == true %>
                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a>
                     <% else %>
                         <a href="/login" class="btn btn-primary">Take the Quiz!</a>
@@ -141,32 +148,8 @@
                 </div>
             </div>
         </div>
-<!--         <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="http://placehold.it/800x500" alt="">
-                <div class="caption">
-                    <h3>Swanny</h3>
-                    <p>The latest front end frameworks</p>
-                    <p>
-                         <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="http://placehold.it/800x500" alt="">
-                <div class="caption">
-                    <h3>DT</h3>
-                    <p>We need to talk about cake</p>
-                    <p>
-                        <a href="#quiz/:id" class="btn btn-primary">Take the Quiz!</a> <a href="#" class="btn btn-default">View Results</a>
-                    </p>
-                </div>
-            </div>
-        </div> -->
     </div>
-            <hr>
+    <hr>
     <footer>
         <div class="row">
             <div class="col-lg-12">

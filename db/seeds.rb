@@ -8,11 +8,12 @@
 
 
 quizzes = Quiz.create([
-  {title: 'How do you brush your teeth?', speaker: 'Buttface McGee'},
-  {title: 'Why should we change underwear?', speaker: 'Danny Distressed'},
-  {title: 'Do sharks have nightmares?', speaker: 'Amanda Huggenkis'},
-  {title: 'Will you survive the military cadets?', speaker: 'Ben Dover'},
-  {title: 'How much wood could a woodchuck chuck?', speaker: 'Jerry Canne'},
+  {title: 'How do you brush your teeth?', speaker: 'Yang'},
+  {title: 'Why should we change underwear?', speaker: 'Mahendra'},
+  {title: 'Do sharks have nightmares?', speaker: 'Josh'},
+  {title: 'Will you survive the military cadets?', speaker: 'JB'},
+  {title: 'How much wood could a woodchuck chuck?', speaker: 'Luke'},
+  {title: 'How much wood could a woodchuck chuck?', speaker: 'Locky'},
   ]);
 
 questions = Question.create([
@@ -29,14 +30,12 @@ questions = Question.create([
   ]);
 
 users = User.create([
-  {name: 'Greg Gremlin', speaker?: false, password: 'cakepudding'},
-  {name: 'Tommy Troll', speaker?: false, password: 'cakepudding'},
-  {name: 'Buttface McGee', speaker?: true, password: 'cakepudding'},
-  {name: 'Danny Distressed', speaker?: true, password: 'cakepudding'},
-  {name: 'Amanda Huggenkis', speaker?: true, password: 'cakepudding'},
-  {name: 'Ben Dover', speaker?: true, password: 'cakepudding'},
-  {name: 'Jerry Canne', speaker?: true, password: 'cakepudding'},
-  {name: 'Alan Ackman', speaker?: false, password: 'cakepudding'},
+  {name: 'Yang', speaker?: true, password: 'cakepudding'},
+  {name: 'Mahendra', speaker?: true, password: 'cakepudding'},
+  {name: 'Josh', speaker?: true, password: 'cakepudding'},
+  {name: 'JB', speaker?: true, password: 'cakepudding'},
+  {name: 'Luke', speaker?: true, password: 'cakepudding'},
+  {name: 'Locky', speaker?: true, password: 'cakepudding'},
   {name: 'Bridget Boone', speaker?: false, password: 'cakepudding'},
   {name: 'Charlie Crooke', speaker?: false, password: 'cakepudding'},
   {name: 'Dorothy Ding', speaker?: false, password: 'cakepudding'},
