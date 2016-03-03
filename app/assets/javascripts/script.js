@@ -96,7 +96,7 @@ var QuizItemTemplateView = Backbone.View.extend({
       this.$el.find('#start-quiz').css('display','inline-block')
     }
     else { //SET BACK TO DISPLAY NONE
-      this.$el.find('#start-quiz').css('display','inline-block')
+      this.$el.find('#start-quiz').css('display','none')
     }
 		return this;
   }
@@ -129,7 +129,6 @@ var QuestionPageView = Backbone.View.extend({
 					console.log('INCORRECT');
 				}
 				$(event.target).closest('.modal-dialog').css('display','none');
-
 		},
 
   render: function() {
@@ -247,7 +246,7 @@ var Router = Backbone.Router.extend({
 				namesArray.push(user.name);
 				console.log(user.score);
 				//CHANGE THIS WHEN REAL SCORES ARE AVAILABLE
-				scoresArray.push(user.score + randomScalingFactor());
+				scoresArray.push(user.score);
 			});
 
 			console.log(namesArray);
