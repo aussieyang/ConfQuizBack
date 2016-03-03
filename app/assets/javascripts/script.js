@@ -95,8 +95,8 @@ var QuizItemTemplateView = Backbone.View.extend({
     if (this.model.enabled) {
       this.$el.find('#start-quiz').css('display','inline-block')
     }
-    else {
-      this.$el.find('#start-quiz').css('display','none')
+    else { //SET BACK TO DISPLAY NONE
+      this.$el.find('#start-quiz').css('display','inline-block')
     }
 		return this;
   }
@@ -112,22 +112,24 @@ var QuestionPageView = Backbone.View.extend({
   template: $('#quizQuestionTemplate').html(),
 
   events: {
-  	'click .quiz label': 'abc'
+  	'click .quiz label': 'updateScore'
   },
 
-	abc: function (event) {
+	updateScore: function (event) {
 				//get question info
 				var selectedAnswer = $(event.target).closest('.btn').find('#answer').html();
 
 				console.log(selectedAnswer);
-				//check answer
+				//check answer, if correct update user score
 				if (selectedAnswer == this.model.get('answer')){
 					console.log('CORRECT');
 					score++;
 				}
-				else
-					{console.log('INCORRECT');}
-				//if correct update user score
+				else {
+					console.log('INCORRECT');
+				}
+				$(event.target).closest('.modal-dialog').css('display','none');
+
 		},
 
   render: function() {
