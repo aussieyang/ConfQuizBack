@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
 # need to pass current_user.id into find() and have params in view
   def score
     user = User.find(params[:id])
-    user.score = user.score + params[:score]
+    user.score = user.score + params[:score].to_i
     user.save
   end
 

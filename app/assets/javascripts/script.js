@@ -1,3 +1,15 @@
+//========== SETUP PAGE FUNCTIONS ==========//
+
+//=== CLEAR SCREEN ===//collect all elements and remove
+var setupBody = function() {
+  $('#mainContainer').children().each( function(child) {
+      $(this).remove();
+	});
+}
+
+var score = 0;
+
+
 //================= MODELS =================//
 var Question = Backbone.Model.extend({
 	urlRoot: 'http://localhost:3000/api/questions'
@@ -59,7 +71,7 @@ var QuizTitlePageView = Backbone.View.extend({
   	$.ajax({
   		url: 'http://localhost:3000/api/users/' +currentUserId,
   		data: { score: score},
-  		type: 'post'
+  		type: 'patch'
   	});
 	},
 
@@ -68,8 +80,6 @@ var QuizTitlePageView = Backbone.View.extend({
 		this.$el.html(html);
 		return this;
   }
-
-
 });
 
 //=== QUIZ MENU ITEM VIEW ===//
@@ -105,11 +115,12 @@ var QuestionPageView = Backbone.View.extend({
 
 				console.log(selectedAnswer);
 				//check answer
-				if (selectedAnswer == this.model.get('answer'))
+				if (selectedAnswer == this.model.get('answer')){
 					console.log('CORRECT');
-					
+					score++;
+				}
 				else
-					console.log('INCORRECT');
+					{console.log('INCORRECT');}
 				//if correct update user score
 		},
 
@@ -135,19 +146,6 @@ var ChartTotalsView = Backbone.View.extend({
   }
 });
 
-
-
-
-//========== SETUP PAGE FUNCTIONS ==========//
-
-//=== CLEAR SCREEN ===//collect all elements and remove
-var setupBody = function() {
-  $('#mainContainer').children().each( function(child) {
-      $(this).remove();
-	});
-}
-
-score = 0;
 
 //=========== ROUTER DECLARATION ===========//
 
